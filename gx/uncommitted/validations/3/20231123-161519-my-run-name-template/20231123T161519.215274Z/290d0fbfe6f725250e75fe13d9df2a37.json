@@ -1,0 +1,4647 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "PRODUCT",
+      "data_connector_name": "default_configured_data_connector_name",
+      "datasource_name": "sf1_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20231123T161519.273329Z"
+    },
+    "batch_spec": {
+      "batch_identifiers": {},
+      "class_name": "Asset",
+      "data_asset_name": "PRODUCT",
+      "module_name": "great_expectations.datasource.data_connector.asset",
+      "schema_name": "PRODUCTION",
+      "sorters": {},
+      "table_name": "PRODUCT",
+      "type": null
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "sf1_checkpoint",
+    "expectation_suite_name": "3",
+    "great_expectations_version": "0.18.3",
+    "run_id": {
+      "run_name": "20231123-161519-my-run-name-template",
+      "run_time": "2023-11-23T22:15:19.215274+06:00"
+    },
+    "validation_id": null,
+    "validation_time": "20231123T161520.730011Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"class\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 548, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/metric_provider.py\", line 100, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/map_metric_provider/column_condition_partial.py\", line 169, in inner_func\n    metric_domain_kwargs = get_dbms_compatible_metric_domain_kwargs(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 703, in get_dbms_compatible_metric_domain_kwargs\n    column_name: str | sqlalchemy.quoted_name = get_dbms_compatible_column_names(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 777, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 873, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"class\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/validator/validation_graph.py\", line 285, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 283, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 552, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"class\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "class"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "class"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"class\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 548, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/metric_provider.py\", line 100, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/map_metric_provider/column_condition_partial.py\", line 169, in inner_func\n    metric_domain_kwargs = get_dbms_compatible_metric_domain_kwargs(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 703, in get_dbms_compatible_metric_domain_kwargs\n    column_name: str | sqlalchemy.quoted_name = get_dbms_compatible_column_names(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 777, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 873, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"class\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/validator/validation_graph.py\", line 285, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 283, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 552, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"class\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "class",
+          "mostly": 1.0,
+          "value_set": [
+            "H ",
+            "NULL",
+            "M ",
+            "L "
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "class"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"class\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 548, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/metric_provider.py\", line 100, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/column_aggregate_metric_provider.py\", line 151, in inner_func\n    metric_domain_kwargs = get_dbms_compatible_metric_domain_kwargs(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 703, in get_dbms_compatible_metric_domain_kwargs\n    column_name: str | sqlalchemy.quoted_name = get_dbms_compatible_column_names(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 777, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 873, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"class\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/validator/validation_graph.py\", line 285, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 283, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 552, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"class\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "class",
+          "max_value": 4,
+          "min_value": 4,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "class"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"class\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 548, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/metric_provider.py\", line 100, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/column_aggregate_metric_provider.py\", line 151, in inner_func\n    metric_domain_kwargs = get_dbms_compatible_metric_domain_kwargs(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 703, in get_dbms_compatible_metric_domain_kwargs\n    column_name: str | sqlalchemy.quoted_name = get_dbms_compatible_column_names(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 777, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 873, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"class\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/validator/validation_graph.py\", line 285, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 283, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 552, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"class\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "class",
+          "max_value": 0.007936507936507936,
+          "min_value": 0.007936507936507936,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "class"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"class\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 548, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/metric_provider.py\", line 100, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/map_metric_provider/column_condition_partial.py\", line 169, in inner_func\n    metric_domain_kwargs = get_dbms_compatible_metric_domain_kwargs(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 703, in get_dbms_compatible_metric_domain_kwargs\n    column_name: str | sqlalchemy.quoted_name = get_dbms_compatible_column_names(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 777, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/expectations/metrics/util.py\", line 873, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"class\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/validator/validation_graph.py\", line 285, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 283, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"/home/isken/.local/lib/python3.10/site-packages/great_expectations/execution_engine/execution_engine.py\", line 552, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"class\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "class",
+          "max_value": 0.007936507936507936,
+          "min_value": 0.007936507936507936,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "class"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "max_value": 504,
+          "min_value": 504
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {},
+              "metric_name": "table.row_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 504
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column_set": [
+            "daystomanufacture",
+            "productmodelid",
+            "size",
+            "listprice",
+            "rowguid",
+            "color",
+            "style",
+            "name",
+            "productnumber",
+            "sellstartdate",
+            "productline",
+            "safetystocklevel",
+            "finishedgoodsflag",
+            "class",
+            "sellenddate",
+            "discontinueddate",
+            "modifieddate",
+            "productsubcategoryid",
+            "productid",
+            "makeflag",
+            "reorderpoint",
+            "sizeunitmeasurecode",
+            "standardcost",
+            "weightunitmeasurecode",
+            "weight"
+          ],
+          "exact_match": null
+        },
+        "meta": {
+          "profiler_details": {
+            "success_ratio": 1.0
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "mismatched": {
+            "missing": [
+              "class"
+            ]
+          }
+        },
+        "observed_value": [
+          "color",
+          "daystomanufacture",
+          "discontinueddate",
+          "finishedgoodsflag",
+          "listprice",
+          "makeflag",
+          "modifieddate",
+          "name",
+          "productid",
+          "productline",
+          "productmodelid",
+          "productnumber",
+          "productsubcategoryid",
+          "reorderpoint",
+          "rowguid",
+          "safetystocklevel",
+          "sellenddate",
+          "sellstartdate",
+          "size",
+          "sizeunitmeasurecode",
+          "standardcost",
+          "style",
+          "weight",
+          "weightunitmeasurecode"
+        ]
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column_values.unique.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "max_value": 1,
+          "min_value": 1,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 1
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "max_value": 999,
+          "min_value": 999,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 999
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "max_value": 999,
+          "min_value": 1,
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "productid"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "productid"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "allow_relative_error": false,
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                447,
+                447
+              ],
+              [
+                747,
+                747
+              ],
+              [
+                873,
+                873
+              ]
+            ]
+          }
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column.quantile_values",
+              "metric_value_kwargs": {
+                "allow_relative_error": false,
+                "quantiles": [
+                  0.25,
+                  0.5,
+                  0.75
+                ]
+              }
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "values": [
+            447,
+            747,
+            873
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "max_value": 747.5,
+          "min_value": 747.5,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column.median",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 747.5
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "max_value": 673.039683,
+          "min_value": 673.039683,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column.mean",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 673.039683
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productid",
+          "max_value": 229.37314181045696,
+          "min_value": 229.37314181045696,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productid"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 229.37314181045696
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "name"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "name"
+              },
+              "metric_name": "column_values.unique.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "name"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "name"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productnumber"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productnumber"
+              },
+              "metric_name": "column_values.unique.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productnumber"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productnumber"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "color"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "color"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "color",
+          "mostly": 1.0,
+          "value_set": [
+            "Grey",
+            "Red",
+            "Yellow",
+            "Silver/Black",
+            "NULL",
+            "Multi",
+            "Silver",
+            "Black",
+            "Blue",
+            "White"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "color"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "color",
+          "max_value": 10,
+          "min_value": 10,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "color"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 10
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "color",
+          "max_value": 0.01984126984126984,
+          "min_value": 0.01984126984126984,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "color"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.01984126984126984
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 3,
+          "min_value": 3,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 3
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 750,
+          "min_value": 750,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 750
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 750,
+          "min_value": 3,
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "reorderpoint"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "reorderpoint"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "allow_relative_error": false,
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                75,
+                75
+              ],
+              [
+                375,
+                375
+              ],
+              [
+                750,
+                750
+              ]
+            ]
+          }
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.quantile_values",
+              "metric_value_kwargs": {
+                "allow_relative_error": false,
+                "quantiles": [
+                  0.25,
+                  0.5,
+                  0.75
+                ]
+              }
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "values": [
+            75,
+            375,
+            750
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 375.0,
+          "min_value": 375.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.median",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 375.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 401.363095,
+          "min_value": 401.363095,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.mean",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 401.363095
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 280.5847152162783,
+          "min_value": 280.5847152162783,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 280.5847152162783
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "mostly": 1.0,
+          "value_set": [
+            3,
+            75,
+            45,
+            750,
+            375,
+            600
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 6,
+          "min_value": 6,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 6
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "reorderpoint",
+          "max_value": 0.011904761904761904,
+          "min_value": 0.011904761904761904,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "reorderpoint"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.011904761904761904
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 0,
+          "min_value": 0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 2171,
+          "min_value": 2171,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 2171
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 2171,
+          "min_value": 0,
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "standardcost"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "standardcost"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "allow_relative_error": false,
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                0,
+                0
+              ],
+              [
+                23,
+                23
+              ],
+              [
+                308,
+                308
+              ]
+            ]
+          }
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.quantile_values",
+              "metric_value_kwargs": {
+                "allow_relative_error": false,
+                "quantiles": [
+                  0.25,
+                  0.5,
+                  0.75
+                ]
+              }
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "values": [
+            0,
+            23,
+            308
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 23.0,
+          "min_value": 23.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.median",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 23.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 258.621032,
+          "min_value": 258.621032,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.mean",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 258.621032
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 461.6438098696873,
+          "min_value": 461.6438098696873,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 461.6438098696873
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "mostly": 1.0,
+          "value_set": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            1555,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            31,
+            1059,
+            36,
+            37,
+            38,
+            39,
+            41,
+            42,
+            45,
+            47,
+            50,
+            52,
+            53,
+            54,
+            55,
+            59,
+            1083,
+            66,
+            78,
+            598,
+            602,
+            93,
+            97,
+            99,
+            102,
+            105,
+            109,
+            110,
+            114,
+            122,
+            2171,
+            133,
+            137,
+            145,
+            146,
+            147,
+            159,
+            180,
+            186,
+            187,
+            699,
+            707,
+            199,
+            200,
+            713,
+            205,
+            739,
+            1252,
+            747,
+            1266,
+            755,
+            295,
+            308,
+            344,
+            352,
+            869,
+            361,
+            1898,
+            885,
+            1912,
+            420,
+            1482,
+            461,
+            487,
+            1519
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 93,
+          "min_value": 93,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 93
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "standardcost",
+          "max_value": 0.18452380952380953,
+          "min_value": 0.18452380952380953,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "standardcost"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.18452380952380953
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 0,
+          "min_value": 0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 3578,
+          "min_value": 3578,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 3578
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 3578,
+          "min_value": 0,
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "listprice"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "listprice"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "allow_relative_error": false,
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                0,
+                0
+              ],
+              [
+                50,
+                50
+              ],
+              [
+                565,
+                565
+              ]
+            ]
+          }
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.quantile_values",
+              "metric_value_kwargs": {
+                "allow_relative_error": false,
+                "quantiles": [
+                  0.25,
+                  0.5,
+                  0.75
+                ]
+              }
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "values": [
+            0,
+            50,
+            565
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 50.0,
+          "min_value": 50.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.median",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 50.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 438.650794,
+          "min_value": 438.650794,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.mean",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 438.650794
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 773.5978048682662,
+          "min_value": 773.5978048682662,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 773.5978048682662
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "mostly": 1.0,
+          "value_set": [
+            0,
+            2,
+            4,
+            5,
+            8,
+            9,
+            10,
+            14,
+            20,
+            21,
+            22,
+            24,
+            25,
+            27,
+            540,
+            29,
+            30,
+            33,
+            34,
+            35,
+            38,
+            39,
+            40,
+            45,
+            46,
+            50,
+            53,
+            54,
+            55,
+            565,
+            1080,
+            60,
+            61,
+            62,
+            64,
+            70,
+            75,
+            81,
+            595,
+            86,
+            88,
+            90,
+            91,
+            92,
+            1120,
+            101,
+            102,
+            107,
+            113,
+            120,
+            121,
+            125,
+            133,
+            147,
+            148,
+            159,
+            1701,
+            175,
+            1215,
+            197,
+            209,
+            218,
+            229,
+            742,
+            236,
+            245,
+            2295,
+            248,
+            250,
+            256,
+            769,
+            264,
+            783,
+            2320,
+            275,
+            300,
+            3375,
+            1350,
+            327,
+            3400,
+            330,
+            333,
+            2384,
+            337,
+            1365,
+            349,
+            357,
+            364,
+            2443,
+            405,
+            1432,
+            1458,
+            1004,
+            3578
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 94,
+          "min_value": 94,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 94
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "listprice",
+          "max_value": 0.1865079365079365,
+          "min_value": 0.1865079365079365,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "listprice"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.1865079365079365
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "size"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "size"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "size",
+          "mostly": 1.0,
+          "value_set": [
+            "S",
+            "40",
+            "M",
+            "50",
+            "60",
+            "NULL",
+            "L",
+            "38",
+            "70",
+            "42",
+            "62",
+            "XL",
+            "46",
+            "58",
+            "48",
+            "54",
+            "52",
+            "56",
+            "44"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "size"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "size",
+          "max_value": 19,
+          "min_value": 19,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "size"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 19
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "size",
+          "max_value": 0.037698412698412696,
+          "min_value": 0.037698412698412696,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "size"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.037698412698412696
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sizeunitmeasurecode"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sizeunitmeasurecode"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sizeunitmeasurecode",
+          "mostly": 1.0,
+          "value_set": [
+            "NULL",
+            "CM "
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sizeunitmeasurecode"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sizeunitmeasurecode",
+          "max_value": 2,
+          "min_value": 2,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sizeunitmeasurecode"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 2
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sizeunitmeasurecode",
+          "max_value": 0.003968253968253968,
+          "min_value": 0.003968253968253968,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sizeunitmeasurecode"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.003968253968253968
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "weightunitmeasurecode"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "weightunitmeasurecode"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "weightunitmeasurecode",
+          "mostly": 1.0,
+          "value_set": [
+            "LB ",
+            "NULL",
+            "G  "
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "weightunitmeasurecode"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "weightunitmeasurecode",
+          "max_value": 3,
+          "min_value": 3,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "weightunitmeasurecode"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 3
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "weightunitmeasurecode",
+          "max_value": 0.005952380952380952,
+          "min_value": 0.005952380952380952,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "weightunitmeasurecode"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.005952380952380952
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "weight"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "weight"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 0,
+          "min_value": 0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 4,
+          "min_value": 4,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 999
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 4,
+          "min_value": 0,
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "daystomanufacture"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "daystomanufacture"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 999
+          }
+        ],
+        "partial_unexpected_list": [
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999
+        ],
+        "unexpected_count": 258,
+        "unexpected_percent": 51.19047619047619,
+        "unexpected_percent_nonmissing": 51.19047619047619,
+        "unexpected_percent_total": 51.19047619047619
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "allow_relative_error": false,
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.quantile_values",
+              "metric_value_kwargs": {
+                "allow_relative_error": false,
+                "quantiles": [
+                  0.25,
+                  0.5,
+                  0.75
+                ]
+              }
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            false,
+            false
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "values": [
+            0,
+            999,
+            999
+          ]
+        }
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.median",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 999.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 1.103175,
+          "min_value": 1.103175,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.mean",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 511.392857
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 1.492615824651474,
+          "min_value": 1.492615824651474,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 499.85453194904613
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "mostly": 1.0,
+          "value_set": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 999
+          }
+        ],
+        "partial_unexpected_list": [
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999,
+          999
+        ],
+        "unexpected_count": 258,
+        "unexpected_percent": 51.19047619047619,
+        "unexpected_percent_nonmissing": 51.19047619047619,
+        "unexpected_percent_total": 51.19047619047619
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 4,
+          "min_value": 4,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 2
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "daystomanufacture",
+          "max_value": 0.007936507936507936,
+          "min_value": 0.007936507936507936,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "daystomanufacture"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.003968253968253968
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productline"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productline"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productline",
+          "mostly": 1.0,
+          "value_set": [
+            "T ",
+            "R ",
+            "M ",
+            "S ",
+            "NULL"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productline"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productline",
+          "max_value": 5,
+          "min_value": 5,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productline"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 5
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productline",
+          "max_value": 0.00992063492063492,
+          "min_value": 0.00992063492063492,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productline"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.00992063492063492
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "style"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "style"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "style",
+          "mostly": 1.0,
+          "value_set": [
+            "NULL",
+            "M ",
+            "U ",
+            "W "
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "style"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "style",
+          "max_value": 4,
+          "min_value": 4,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "style"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 4
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "style",
+          "max_value": 0.007936507936507936,
+          "min_value": 0.007936507936507936,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "style"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.007936507936507936
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productsubcategoryid"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productsubcategoryid"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productsubcategoryid",
+          "mostly": 1.0,
+          "value_set": [
+            "7",
+            "3",
+            "35",
+            "18",
+            "20",
+            "13",
+            "28",
+            "11",
+            "34",
+            "12",
+            "26",
+            "6",
+            "16",
+            "4",
+            "30",
+            "5",
+            "23",
+            "NULL",
+            "31",
+            "29",
+            "2",
+            "17",
+            "25",
+            "21",
+            "27",
+            "22",
+            "8",
+            "1",
+            "32",
+            "10",
+            "33",
+            "9",
+            "19",
+            "36",
+            "37",
+            "14",
+            "24",
+            "15"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productsubcategoryid"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productsubcategoryid",
+          "max_value": 38,
+          "min_value": 38,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productsubcategoryid"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 38
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productsubcategoryid",
+          "max_value": 0.07539682539682539,
+          "min_value": 0.07539682539682539,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productsubcategoryid"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.07539682539682539
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "productmodelid"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "productmodelid"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellstartdate"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellstartdate"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellstartdate",
+          "max_value": "2008-04-30T00:00:00",
+          "min_value": "2008-04-30T00:00:00",
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellstartdate"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "2008-04-30T00:00:00"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellstartdate",
+          "max_value": "2013-05-30T00:00:00",
+          "min_value": "2013-05-30T00:00:00",
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellstartdate"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "2013-05-30T00:00:00"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellstartdate",
+          "max_value": "2013-05-30T00:00:00",
+          "min_value": "2008-04-30T00:00:00",
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "sellstartdate"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "sellstartdate"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellstartdate",
+          "max_value": 4,
+          "min_value": 4,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellstartdate"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 4
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellstartdate",
+          "max_value": 0.007936507936507936,
+          "min_value": 0.007936507936507936,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellstartdate"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.007936507936507936
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellenddate"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellenddate"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellenddate",
+          "mostly": 1.0,
+          "value_set": [
+            "NULL",
+            "2012-05-29 00:00:00.000",
+            "2013-05-29 00:00:00.000"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellenddate"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellenddate",
+          "max_value": 3,
+          "min_value": 3,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellenddate"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 3
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "sellenddate",
+          "max_value": 0.005952380952380952,
+          "min_value": 0.005952380952380952,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "sellenddate"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.005952380952380952
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "discontinueddate"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "discontinueddate"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "discontinueddate",
+          "mostly": 1.0,
+          "value_set": [
+            "NULL"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "discontinueddate"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "element_count": 504,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "discontinueddate",
+          "max_value": 1,
+          "min_value": 1,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "discontinueddate"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 1
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "290d0fbfe6f725250e75fe13d9df2a37",
+          "column": "discontinueddate",
+          "max_value": 0.001984126984126984,
+          "min_value": 0.001984126984126984,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "discontinueddate"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.001984126984126984
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 108,
+    "success_percent": 86.11111111111111,
+    "successful_expectations": 93,
+    "unsuccessful_expectations": 15
+  },
+  "success": false
+}
